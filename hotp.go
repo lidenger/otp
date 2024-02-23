@@ -1,4 +1,3 @@
-// Package otp_algorithm otp_algorithm
 package otp
 
 import (
