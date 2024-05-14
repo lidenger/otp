@@ -55,12 +55,12 @@ func TOTP(k string) (string, error) {
 // k 密钥种子，base32 encode
 // code 需要校验的otp
 func VerifyTOTP(k string, code string) (bool, error) {
+	keyDecode, err := base32.StdEncoding.DecodeString(k)
+	if err != nil {
+		return false, err
+	}
 	for _, window := range windows {
 		now := time.Now().Unix()
-		keyDecode, err := base32.StdEncoding.DecodeString(k)
-		if err != nil {
-			return false, err
-		}
 		c := TOTPWithOptions(keyDecode, now, window)
 		if c == code {
 			return true, nil

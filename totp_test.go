@@ -16,7 +16,7 @@ func TestTOTP(t *testing.T) {
 
 func TestVerifyTOTP(t *testing.T) {
 	key := "6KFGGMBBCCRAAY3D"
-	result, err := VerifyTOTP(key, "712512")
+	result, err := VerifyTOTP(key, "279038")
 	if err != nil {
 		t.Fatal(err)
 	}
