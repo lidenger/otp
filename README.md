@@ -1,4 +1,4 @@
-# otp
+# HOTP & TOTP
 
 ### 简介
 基于RFC标准提供HOTP和TOTP算法
